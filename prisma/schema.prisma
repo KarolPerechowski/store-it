@@ -25,11 +25,11 @@ model User {
 }
 
 model Location {
-  id          Int          @id @default(autoincrement())
+  id          Int           @id @default(autoincrement())
   city        String
   address     String
-  user        User         @relation(fields: [id], references: [id])
-  type        LocationType
+  user        User          @relation(fields: [id], references: [id])
+  type        LocationType?
   width       Int
   length      Int
   height      Int
